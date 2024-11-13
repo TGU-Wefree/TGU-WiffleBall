@@ -3,7 +3,7 @@
 <header>
 <p>全日本ウィッフルボール学生連盟</p>
 </header> 
-<nav>
+<nav id="global-nav">
   <ul>
     <li><a href="index.html" class="current">HOME</a></li>
     <li><a href="page1.html">About</a></li>
@@ -12,6 +12,22 @@
     <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScq_3uiLp0hCdZ351JEykitsCDsR_6yhBRCyklo2DV7nsvzCQ/viewform?usp=sf_link">Contact(GoogleForm)</a></li>
   </ul>
 </nav>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+  var menu = $('#global-nav'),
+  offset = menu.offset();
+$(window).scroll(function () {
+  if($(window).scrollTop() > offset.top) {
+    menu.addClass('fixed');
+  } else {
+    menu.removeClass('fixed');
+    }
+  });
+});
+</script>
+  
 <title> 全日本ウィッフルボール学生連盟 </title>
 <body>
 <br>
