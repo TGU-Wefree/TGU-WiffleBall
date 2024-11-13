@@ -1,0 +1,133 @@
+
+nav {
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    position: fixed;
+    top:90;
+    background-position-y: 15px;
+    padding-bottom: 15px;
+  }
+  @keyframes bg-color {
+    0% { background-color: #1abc9c; }
+    33% { background-color: #3498db; }
+    66% { background-color: #9b59b6; }
+    100% { background-color: #1abc9c; }
+  }
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+  }
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 18px 30px;
+    outline: 1px solid;
+    outline-color: white;
+    outline-offset: 0px;
+    display: inline-block;
+    transition: .3s;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color:gray;
+  }
+
+  nav a:hover{
+    animation: light .8s infinite;
+  }
+
+  .menu a{
+    outline-width: 40px;
+    outline-color: white;
+    background-color: #fff;
+    color: black;
+    display: block;
+  }
+
+  @keyframes light {
+    100% { 
+      outline-color: transparent;
+      outline-offset: 12px;
+    }
+  }
+
+  .container  {
+    margin : 30px ;
+    padding : 20px ;
+    border : 5px solid white ;
+    color: white;
+  }
+  body {
+  /*  animation: bg-color 30s infinite;*/
+    background-image:linear-gradient( 135deg,rgba(245, 245, 125, 0.6), rgba(118, 118, 240, 0.6), rgba(205, 101, 231, 0.6)),url(Top_photo.jpg);
+    background-size: cover;
+    height: 100px;
+    vertical-align: middle;
+    word-break: break-word;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+  }
+  .menu{
+    margin-right: 30px;
+  }
+  .box{
+    display:inline-block;
+  }
+  .block1 {
+    margin-left: 100px;
+    word-break: break-word;
+    margin-left: 100px;
+  }
+
+  .block2 {
+    word-break: break-word;
+    margin-right: 100px;
+    color: black;
+  }
+  .block3 {
+    margin-left: 100px;
+  }
+
+  html {
+    color:white
+  }
+
+  .current{
+    background-color: white;
+    color:black;
+  }
+
+  header{
+    font-family: "Comic Sans MS","Yu Gothic";
+    background-image:url(AirDropperHeader.gif);
+    text-align:center;
+    font-size: 55px;
+    color: rgba(255,255,255,1);
+    font-weight:1000;
+    -webkit-text-stroke: 3px rgb(140,140,140);
+    background-size:cover;
+  }
+
+  .center{
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a{
+    color: white;
+  }
+
+  .blog{
+    width: 800px;
+    display: flex;
+    align-items: center;
+  }
+
+  .number{
+    font-size: 200px;
+  }
