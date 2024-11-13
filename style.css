@@ -63,7 +63,7 @@ nav {
   }
   body {
   /*  animation: bg-color 30s infinite;*/
-    background-image:linear-gradient( 135deg,rgba(245, 245, 125, 0.6), rgba(118, 118, 240, 0.6), rgba(205, 101, 231, 0.6)),url(Top_photo.jpg);
+    background-image:linear-gradient( 135deg,rgba(245, 245, 125, 0.6), rgba(118, 118, 240, 0.6), rgba(205, 101, 231, 0.6));
     background-size: cover;
     height: 100px;
     vertical-align: middle;
@@ -103,7 +103,7 @@ nav {
 
   header{
     font-family: "Comic Sans MS","Yu Gothic";
-    background-image:url(AirDropperHeader.gif);
+    background-image:,url(Top_photo.jpg);
     text-align:center;
     font-size: 55px;
     color: rgba(255,255,255,1);
