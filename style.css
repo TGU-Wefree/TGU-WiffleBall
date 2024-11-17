@@ -3,11 +3,11 @@ nav {
     height: 70px;
     box-sizing: border-box;
     top:90;
-    background-position-y: 15px;
     padding-bottom: 15px;
+    background-color:skyblue;
   }
   @keyframes bg-color {
-    0% { background-color: #1abc9c; }
+    0% { background-color: #9b59b6; }
     33% { background-color: #3498db; }
     66% { background-color: #9b59b6; }
     100% { background-color: #1abc9c; }
@@ -19,6 +19,7 @@ nav {
     list-style: none;
   }
   nav a {
+    margin-top:5px;
     text-decoration: none;
     color: #fff;
     font-size: 16px;
@@ -37,6 +38,9 @@ nav {
   nav a:hover{
     animation: light .8s infinite;
   }
+  nav a:link{
+    color:white;
+  }
 
   .menu a{
     outline-width: 40px;
@@ -53,15 +57,9 @@ nav {
     }
   }
 
-  .container  {
-    margin : 30px ;
-    padding : 20px ;
-    border : 5px solid white ;
-    color: white;
-  }
   body {
   /*  animation: bg-color 30s infinite;*/
-    background-image:linear-gradient( 135deg,rgba(245, 245, 125, 0.6), rgba(118, 118, 240, 0.6), rgba(205, 101, 231, 0.6));
+    background-image:url("https://user0514.cdnw.net/shared/img/thumb/PAK76_aoihikarito420150218192050_TP_V4.jpg");
     background-size: cover;
     height: 100px;
     vertical-align: middle;
@@ -75,22 +73,58 @@ nav {
   .box{
     display:inline-block;
   }
+  
+  .container  {
+    margin : 30px ;
+    padding : 20px ;
+    border : 5px solid white ;
+    display:flex;
+    justify-content: space-around;
+  }
   .block1 {
-    margin-left: 100px;
+    text-align:left;
+    margin-left:5%;
+    margin-right:5%;
     word-break: break-word;
+    width:50%;
+    
+  }
+  .block1 h1{
+    border-bottom: 2px solid white;
+  }
+  .block2 h1{
+    border : 3px solid white;
+    background-color:grey;
   }
 
   .block2 {
-    word-break: break-word;
-    margin-right: 100px;
-    color: black;
+    text-align:center;
+    height: auto;
+    color:white;
+    width: 50%;
+    
   }
-  .block3 {
-    margin-left: 100px;
+  .block2 h3{
+    text-align:left;
+    margin-left:10%;
+    margin-right:10%;
+    border-bottom: 2px solid white;
   }
-
+  .block2 ul{
+    margin-left:5%;
+    margin-right:10%;
+    text-align:left;
+  }
+  .block2-1 {
+    border : 3px solid white;
+    word-break:break-word;
+    background-color:grey;
+    margin-right:30px;
+    margin-left:30px;
+  }
+  
   html {
-    color:white
+    color:black
   }
 
   .current{
@@ -100,12 +134,14 @@ nav {
 
   header{
     font-family: "Comic Sans MS","Yu Gothic";
-    background-image:url(Top_photo.jpg);
+    border-bottom:2px solid white;
+    margin-left:10%;
+    margin-right:10%;
     text-align:center;
     font-size: 55px;
     color: rgba(255,255,255,1);
     font-weight:bold;
-    -webkit-text-stroke: 3px rgb(140,140,140);
+    -webkit-text-stroke: 3px black;
     background-size:cover;
   }
 
@@ -113,10 +149,6 @@ nav {
     text-align: center;
     max-width: 100%;
     height: auto;
-  }
-
-  a{
-    color: white;
   }
 
   .blog{
@@ -140,7 +172,7 @@ nav {
     justify-content: center;
     align-items: center;
     z-index: 90;
-    background-color: #3584bb;
+    background-color: skyblue;
 }
 .menu-btn span,
 .menu-btn span:before,
@@ -176,6 +208,7 @@ nav {
 }
 
 /*メニューボタンここまで*/
+/*メニュー中身*/
 .contents {
     width: 100%;
     height: 100%;
@@ -183,7 +216,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 80;
-    background-color: #3584bb;
+    background-color: skyblue;
 }
 .contents ul {
     padding: 70px 10px 0;
@@ -203,8 +236,8 @@ nav {
 .contents ul li a {
     display: block;
     width: 100%;
-    font-size: 6vmin;
-    -webkit-text-stroke: 1px rgb(140,140,140);
+    font-size: 5vmin;
+    -webkit-text-stroke: 2px rgb(160,160,160);
     box-sizing: border-box;
     color:#ffffff;
     text-decoration: none;
@@ -230,9 +263,82 @@ nav {
     top: 0;
     left: 100%;/*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
-    background-color: #3584bb;
+    background-color: skyblue;
     transition: all 0.5s;/*アニメーション設定*/
 }
 #menu-btn-check:checked ~ .contents {
     left: 50%;/*メニューを画面内へ*/
+}
+
+/*トップページのスライドショー*/
+.slide-show{
+  height: 400px;
+  width: 100%;
+  position: relative;
+  left:0;
+}
+
+.image {
+  background-size: cover;
+  background-position: center center;
+  
+  animation: image-switch-animation 13s infinite;
+}
+
+.src1 {
+  background-image: url("home_photo1.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 50;
+  right: 60%;
+  opacity: 0;
+}
+.src2 {
+  position: absolute;
+  top: 50;
+  left: 20%;
+  bottom: 0;
+  right: 40%;
+  opacity: 0;
+  background-image: url("home_photo2.jpg");
+}
+.src3 {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  bottom: 50;
+  right: 20%;
+  opacity: 0;
+  background-image: url("home_photo3.jpg");
+}
+.src4 {
+  position: absolute;
+  top: 50;
+  left: 60%;
+  bottom: 0;
+  right: 0%;
+  opacity: 0;
+  background-image: url("home_photo4.jpg");
+}
+
+.image:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+  animation-delay: 3s;
+}
+.image:nth-of-type(3) {
+  animation-delay: 6s;
+}
+.image:nth-of-type(4) {
+  animation-delay: 9s;
+}
+
+@keyframes image-switch-animation {
+  0%{ opacity: 0;}
+  5%{ opacity: 1;}
+  25%{ opacity: 1;}
+  40%{ opacity: 0;}
+  100%{ opacity: 0;}
 }
