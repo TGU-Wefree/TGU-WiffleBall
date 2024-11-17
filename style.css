@@ -128,7 +128,7 @@ nav {
   }
 
   .current{
-    background-color: white;
+    background-color: blue;
     color:black;
   }
   .current:link{
