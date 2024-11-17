@@ -131,6 +131,9 @@ nav {
     background-color: white;
     color:black;
   }
+  .current:link{
+      color:black
+  }
 
   header{
     font-family: "Comic Sans MS","Yu Gothic";
