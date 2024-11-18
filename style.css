@@ -5,6 +5,7 @@ nav {
     top:90;
     padding-bottom: 15px;
     background-color:skyblue;
+    text-align:center;
   }
   @keyframes bg-color {
     0% { background-color: #9b59b6; }
